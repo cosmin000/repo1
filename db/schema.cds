@@ -18,3 +18,9 @@ using { managed } from '@sap/cds/common';
     timeline     : String;
     risks        : Association to many Risks on risks.miti = $self;
   }
+
+  entity Parameters : managed {
+    key ID       : UUID  @(Core.Computed : true);
+    name  		: String;
+    value        : String;
+  }
